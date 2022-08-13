@@ -1,38 +1,296 @@
-.App {
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  overflow: hidden;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1:before,
+h1:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1:before {
+  right: 0.5em;
+  margin-left: -50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+.newCard{
+  width: 372px !important;
+  /* width: 375px !important; */
+}
+.blogh{
+  font-size: 16px !important;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.main-heading{
+  color: #062944;
+}
+.nav-link:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #FFDD00;
+  text-underline-offset: 4px;
+  color: #000;
+}
+.Ftitle{
+  color: #062944;
+  font-weight: 700;
+  font-size: 12px;
+}
+.ftext{
+  font-size: 12px;
+    text-transform: uppercase;
+    color: #062944;
+    margin: 0px !important;
+}
+input[type=email]{
+  border:1px solid #ced4da !important;
+}
+label{
+  font-size: 13px !important;
+  color: #062944;
+  font-weight: bolder;
+}
+.divBg{
+  width: 30px;
+  height: 31px;
+  background: #000;
+  border-radius: 50%;
+}
+.divBg:hover{
+  background-color:#FFDD00 ;
+}
+.HeaConBg{
+  background-color: #eaeae8;
+  color: #2b2c31;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.inpuField{
+  padding: 7px 10px 7px 31px;
+  height: 35px !important;
+}
+.inpuField:hover{
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+.inpuField:focus{
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+select{
+  width: 100px !important;
+}
+.headerP{
+  font-size: 12px !important;
+  cursor: pointer;
+}
+.htext{
+  font-size: 14px !important;
+}
+
+li{
+  list-style-type: none !important;
+}
+.nav-link{
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+}
+ul li:first-child{
+  color: red !important;
+}
+
+.slide-content{
+  position: relative;
+}
+.arr-s{
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  box-shadow: 0 0 5px rgb(0 0 0 / 15%);
 }
 
-.App-link {
-  color: #61dafb;
+.slide{
+  opacity: 0;
+  transition-duration: 1s easy;
+}
+.slide.active{
+  opacity: 1;
+  transition-duration: 1s;
+  /* transform: scale(1.05); */
+}
+/* .active{
+  background-color: #ffdf07 !important;
+} */
+
+.containerBox {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product {
+  background-image: url("https://www.cstatic-images.com/car-pictures/xl/USC10TSC011A0101.png");
+  pointer-events: none;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  opacity: 1;
+  height: 300px;
+  width: 500px;
 }
+
+.first{
+  width: 275px;
+  height: 275px;
+}
+.btnHover:hover{
+  background-color: #062944 !important;
+  color: #fff;
+  transition: all .2s ease;
+}
+hr.new1{
+  border-bottom:1px solid #000;
+}
+.textContent{
+  position: relative;
+}
+.textContent:hover .textdata{
+  display: none !important;
+}
+
+.posAbsolute{
+  position: absolute;
+  bottom: 20;
+  left: 20;
+  z-index: 1000;
+}
+.cp:hover{
+  cursor: pointer;
+}
+#tdAbs{
+  position: absolute;
+  top: 0px;
+  right: 10;
+  /* border: 3px solid #73AD21; */
+} 
+#tdAbs:hover{
+  cursor: pointer;
+}
+.fa-solid:hover{
+  cursor: pointer !important;
+}
+.borAdded:focus{
+  border-top: 1px solid black;
+  border-bottom: 1px solid white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+
+}
+.htwobg{
+  color: #062944;
+}
+.inpBoxW{
+  height: 38px !important;
+}
+
+.dDis{
+  visibility: hidden !important;
+}
+.textLg{
+  font-size: 18px;
+}
+.textLgp{
+  font-size: 15px;
+}
+.newButton{
+  background: #062944;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: normal;
+  padding: 0 10px;
+  -webkit-appearance: none;
+  border: 0;
+  min-width: 160px;
+  line-height: 38px;
+}
+@media only screen and (max-device-width: 992px) {
+  .first{
+    width: 158px;
+    height: 158px;
+  }
+ 
+}
+@media only screen and (max-device-width: 480px) {
+  .first{
+    width: 165px;
+    height: 165px;
+  }
+  .title-text{
+    font-size: 22px;
+  }
+  .title-text-p{
+    font-size: 15px;
+  }
+  .newCard{
+    width: 375px !important;
+  }
+  .inpBoxW{
+    width: 323px !important;
+  }
+  .inpuField{
+    padding: 5px 10px 5px 31px;
+    height: 35px;
+  }
+  .texts{
+    font-size: 12px;
+    width: 160px !important;
+    height: 40px;
+  }
+  .dNot{
+    display: none !important;
+  }
+  .dDis{
+    display: block !important;
+  }
+  
+}
+
